@@ -1,0 +1,784 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+:root {
+  /*## Layout*/
+  /*## Colors*/
+  /*### Primary*/
+  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Dark-cyan: hsl(176, 72%, 28%);
+  /*### Neutral*/
+  --Black: hsl(0, 0%, 0%);
+  --Dark-gray: hsl(0, 0%, 48%);
+  /*## Typography*/
+  /*### Body Copy*/
+  /*- Font size: 16px*/
+  /*### Font
+
+  - Family: [Commissioner](https://fonts.google.com/specimen/Commissioner)
+  - Weights: 400, 500, 700*/
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+}
+body .container {
+  width: 100vw;
+  height: auto;
+  position: relative;
+}
+body .container .header {
+  padding: 5vw;
+  width: 90%;
+  height: 30vh;
+  background-image: url(../images/image-hero-mobile.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+body .container .header .logo-icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+body .container .header .logo-icon-container .icon-hamburger,
+body .container .header .logo-icon-container .close-menu {
+  position: absolute;
+  right: 5vw;
+  cursor: pointer;
+}
+body .container .header .logo-icon-container .icon-hamburger.hide {
+  display: none;
+}
+body .container .header .logo-icon-container .close-menu {
+  display: none;
+}
+body .container .header .logo-icon-container .close-menu.show {
+  display: block;
+}
+body .container .header .menu-about nav {
+  display: block;
+  width: 95%;
+  height: auto;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 5vh;
+  display: none;
+}
+body .container .header .menu-about nav ul {
+  padding-top: 3vh;
+  padding-bottom: 1px;
+  padding-left: 6vw;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+body .container .header .menu-about nav ul li {
+  list-style: none;
+  margin-bottom: 5vh;
+  font-weight: 500;
+  font-size: 16px;
+}
+body .container .header .menu-about nav.show {
+  display: block;
+}
+body .container .bamboo-monnitor {
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+  margin-top: -8vh;
+  border-radius: 5px;
+  padding-bottom: 5vh;
+  z-index: -2;
+}
+body .container .bamboo-monnitor img {
+  margin-left: 40%;
+  margin-top: -10%;
+}
+body .container .bamboo-monnitor .title {
+  text-align: center;
+}
+body .container .bamboo-monnitor .description {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  font-size: 14px;
+  color: var(--Dark-gray);
+  margin-bottom: 3vh;
+}
+body .container .bamboo-monnitor .back-project {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: -3;
+}
+body .container .bamboo-monnitor .back-project .btn-project {
+  background: var(--Moderate-cyan);
+  outline: none;
+  height: 8vh;
+  border: none;
+  border-radius: 25px;
+  width: 70%;
+  color: #fff;
+  font-weight: 500;
+  z-index: 15;
+  cursor: pointer;
+}
+body .container .bamboo-monnitor .back-project .btn-project:hover {
+  background: var(--Dark-cyan);
+}
+body .container .bamboo-monnitor .back-project .bookmark-img {
+  display: flex;
+}
+body .container .bamboo-monnitor .back-project .bookmark-img svg {
+  cursor: pointer;
+  padding: 11px;
+  padding-right: 0;
+  z-index: 15;
+  margin-top: -2vh;
+}
+body .container .bamboo-monnitor .back-project .bookmark-img svg circle {
+  fill: auto;
+}
+body .container .bamboo-monnitor .back-project .bookmark-img svg circle.bookmarked {
+  fill: var(--Moderate-cyan);
+}
+body .container .bamboo-monnitor .back-project .bookmark-img .bmrk-txt {
+  margin-top: -2px;
+  border: 1px solid #c5bbbb;
+  background: #d8d1d1;
+  color: var(--Dark-gray);
+  font-weight: 600;
+  padding: 15px;
+  padding-top: 15px;
+  padding-right: 18px;
+  padding-left: 30px;
+  font-size: 14px;
+  border-radius: 0 25px 25px 0;
+  margin-left: -5vw;
+  display: none;
+}
+body .container .bamboo-monnitor .back-project .bookmark-img .bmrk-txt.appear {
+  display: flex;
+  color: var(--Moderate-cyan);
+}
+body .container .back-project-menu {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 5%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  z-index: 5;
+  position: absolute;
+  display: none;
+  left: 3%;
+  background: #fff;
+  z-index: 100;
+  margin-top: -45vh;
+}
+body .container .back-project-menu header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body .container .back-project-menu header .project-title {
+  margin-top: 2vh;
+  margin-bottom: 0;
+  font-size: 15px;
+  text-align: left;
+}
+body .container .back-project-menu header img {
+  height: 50%;
+  cursor: pointer;
+}
+body .container .back-project-menu .back-description {
+  color: var(--Dark-gray);
+  text-align: left;
+  font-size: 13px;
+}
+body .container .back-project-menu .plg-reward {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 5vw;
+  margin-bottom: 4vh;
+}
+body .container .back-project-menu .plg-reward input {
+  margin-right: 1vw;
+  cursor: pointer;
+}
+body .container .back-project-menu .plg-reward label {
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+body .container .back-project-menu .plg-reward label:hover {
+  color: var(--Moderate-cyan);
+}
+body .container .back-project-menu .plg-reward .option-content {
+  display: none;
+}
+body .container .back-project-menu .plg-reward .option-content .option-desc {
+  color: var(--Dark-gray);
+  font-size: 12px;
+  line-height: 3vh;
+}
+body .container .back-project-menu .plg-reward .option-content.open {
+  display: block;
+}
+body .container .back-project-menu .bambooStand,
+body .container .back-project-menu .black-ed,
+body .container .back-project-menu .out-of-stock {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 5vw;
+  height: auto;
+  margin-bottom: 4vh;
+}
+body .container .back-project-menu .bambooStand input,
+body .container .back-project-menu .black-ed input,
+body .container .back-project-menu .out-of-stock input {
+  margin-right: 1vw;
+  cursor: pointer;
+}
+body .container .back-project-menu .bambooStand label,
+body .container .back-project-menu .black-ed label,
+body .container .back-project-menu .out-of-stock label {
+  font-weight: 600;
+  font-size: 12px;
+  margin-right: 2vw;
+  cursor: pointer;
+}
+body .container .back-project-menu .bambooStand label:hover,
+body .container .back-project-menu .black-ed label:hover,
+body .container .back-project-menu .out-of-stock label:hover {
+  color: var(--Moderate-cyan);
+}
+body .container .back-project-menu .bambooStand span,
+body .container .back-project-menu .black-ed span,
+body .container .back-project-menu .out-of-stock span {
+  font-size: 12px;
+  color: var(--Moderate-cyan);
+}
+body .container .back-project-menu .bambooStand .cost,
+body .container .back-project-menu .black-ed .cost,
+body .container .back-project-menu .out-of-stock .cost {
+  margin-left: 2vw;
+  color: #000;
+  font-weight: 600;
+}
+body .container .back-project-menu .bambooStand .left,
+body .container .back-project-menu .black-ed .left,
+body .container .back-project-menu .out-of-stock .left {
+  color: var(--Dark-gray);
+}
+body .container .back-project-menu .bambooStand .option-content,
+body .container .back-project-menu .bambooStand .bamboo,
+body .container .back-project-menu .bambooStand .black,
+body .container .back-project-menu .black-ed .option-content,
+body .container .back-project-menu .black-ed .bamboo,
+body .container .back-project-menu .black-ed .black,
+body .container .back-project-menu .out-of-stock .option-content,
+body .container .back-project-menu .out-of-stock .bamboo,
+body .container .back-project-menu .out-of-stock .black {
+  display: none;
+}
+body .container .back-project-menu .bambooStand .option-content .option-desc,
+body .container .back-project-menu .bambooStand .bamboo .option-desc,
+body .container .back-project-menu .bambooStand .black .option-desc,
+body .container .back-project-menu .black-ed .option-content .option-desc,
+body .container .back-project-menu .black-ed .bamboo .option-desc,
+body .container .back-project-menu .black-ed .black .option-desc,
+body .container .back-project-menu .out-of-stock .option-content .option-desc,
+body .container .back-project-menu .out-of-stock .bamboo .option-desc,
+body .container .back-project-menu .out-of-stock .black .option-desc {
+  color: var(--Dark-gray);
+  font-size: 12px;
+  line-height: 3vh;
+}
+body .container .back-project-menu .bambooStand .option-content .enter-pledge,
+body .container .back-project-menu .bambooStand .bamboo .enter-pledge,
+body .container .back-project-menu .bambooStand .black .enter-pledge,
+body .container .back-project-menu .black-ed .option-content .enter-pledge,
+body .container .back-project-menu .black-ed .bamboo .enter-pledge,
+body .container .back-project-menu .black-ed .black .enter-pledge,
+body .container .back-project-menu .out-of-stock .option-content .enter-pledge,
+body .container .back-project-menu .out-of-stock .bamboo .enter-pledge,
+body .container .back-project-menu .out-of-stock .black .enter-pledge {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4vh;
+}
+body .container .back-project-menu .bambooStand .option-content .enter-pledge .enter-pledge-desc,
+body .container .back-project-menu .bambooStand .bamboo .enter-pledge .enter-pledge-desc,
+body .container .back-project-menu .bambooStand .black .enter-pledge .enter-pledge-desc,
+body .container .back-project-menu .black-ed .option-content .enter-pledge .enter-pledge-desc,
+body .container .back-project-menu .black-ed .bamboo .enter-pledge .enter-pledge-desc,
+body .container .back-project-menu .black-ed .black .enter-pledge .enter-pledge-desc,
+body .container .back-project-menu .out-of-stock .option-content .enter-pledge .enter-pledge-desc,
+body .container .back-project-menu .out-of-stock .bamboo .enter-pledge .enter-pledge-desc,
+body .container .back-project-menu .out-of-stock .black .enter-pledge .enter-pledge-desc {
+  font-size: 12px;
+  width: 40%;
+}
+body .container .back-project-menu .bambooStand .option-content .enter-pledge input,
+body .container .back-project-menu .bambooStand .option-content .enter-pledge .input,
+body .container .back-project-menu .bambooStand .option-content .enter-pledge .input-b,
+body .container .back-project-menu .bambooStand .bamboo .enter-pledge input,
+body .container .back-project-menu .bambooStand .bamboo .enter-pledge .input,
+body .container .back-project-menu .bambooStand .bamboo .enter-pledge .input-b,
+body .container .back-project-menu .bambooStand .black .enter-pledge input,
+body .container .back-project-menu .bambooStand .black .enter-pledge .input,
+body .container .back-project-menu .bambooStand .black .enter-pledge .input-b,
+body .container .back-project-menu .black-ed .option-content .enter-pledge input,
+body .container .back-project-menu .black-ed .option-content .enter-pledge .input,
+body .container .back-project-menu .black-ed .option-content .enter-pledge .input-b,
+body .container .back-project-menu .black-ed .bamboo .enter-pledge input,
+body .container .back-project-menu .black-ed .bamboo .enter-pledge .input,
+body .container .back-project-menu .black-ed .bamboo .enter-pledge .input-b,
+body .container .back-project-menu .black-ed .black .enter-pledge input,
+body .container .back-project-menu .black-ed .black .enter-pledge .input,
+body .container .back-project-menu .black-ed .black .enter-pledge .input-b,
+body .container .back-project-menu .out-of-stock .option-content .enter-pledge input,
+body .container .back-project-menu .out-of-stock .option-content .enter-pledge .input,
+body .container .back-project-menu .out-of-stock .option-content .enter-pledge .input-b,
+body .container .back-project-menu .out-of-stock .bamboo .enter-pledge input,
+body .container .back-project-menu .out-of-stock .bamboo .enter-pledge .input,
+body .container .back-project-menu .out-of-stock .bamboo .enter-pledge .input-b,
+body .container .back-project-menu .out-of-stock .black .enter-pledge input,
+body .container .back-project-menu .out-of-stock .black .enter-pledge .input,
+body .container .back-project-menu .out-of-stock .black .enter-pledge .input-b {
+  width: 25%;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid #000;
+  height: 4vh;
+  position: relative;
+  padding-left: 3vw;
+}
+body .container .back-project-menu .bambooStand .option-content .enter-pledge .input.correct,
+body .container .back-project-menu .bambooStand .bamboo .enter-pledge .input.correct,
+body .container .back-project-menu .bambooStand .black .enter-pledge .input.correct,
+body .container .back-project-menu .black-ed .option-content .enter-pledge .input.correct,
+body .container .back-project-menu .black-ed .bamboo .enter-pledge .input.correct,
+body .container .back-project-menu .black-ed .black .enter-pledge .input.correct,
+body .container .back-project-menu .out-of-stock .option-content .enter-pledge .input.correct,
+body .container .back-project-menu .out-of-stock .bamboo .enter-pledge .input.correct,
+body .container .back-project-menu .out-of-stock .black .enter-pledge .input.correct {
+  border: 2px solid var(--Moderate-cyan);
+}
+body .container .back-project-menu .bambooStand .option-content .enter-pledge .input-b.correct,
+body .container .back-project-menu .bambooStand .bamboo .enter-pledge .input-b.correct,
+body .container .back-project-menu .bambooStand .black .enter-pledge .input-b.correct,
+body .container .back-project-menu .black-ed .option-content .enter-pledge .input-b.correct,
+body .container .back-project-menu .black-ed .bamboo .enter-pledge .input-b.correct,
+body .container .back-project-menu .black-ed .black .enter-pledge .input-b.correct,
+body .container .back-project-menu .out-of-stock .option-content .enter-pledge .input-b.correct,
+body .container .back-project-menu .out-of-stock .bamboo .enter-pledge .input-b.correct,
+body .container .back-project-menu .out-of-stock .black .enter-pledge .input-b.correct {
+  border: 2px solid var(--Moderate-cyan);
+}
+body .container .back-project-menu .bambooStand .option-content .enter-pledge button,
+body .container .back-project-menu .bambooStand .bamboo .enter-pledge button,
+body .container .back-project-menu .bambooStand .black .enter-pledge button,
+body .container .back-project-menu .black-ed .option-content .enter-pledge button,
+body .container .back-project-menu .black-ed .bamboo .enter-pledge button,
+body .container .back-project-menu .black-ed .black .enter-pledge button,
+body .container .back-project-menu .out-of-stock .option-content .enter-pledge button,
+body .container .back-project-menu .out-of-stock .bamboo .enter-pledge button,
+body .container .back-project-menu .out-of-stock .black .enter-pledge button {
+  background: var(--Dark-cyan);
+  width: 30%;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 13px;
+  height: 4.5vh;
+  cursor: pointer;
+}
+body .container .back-project-menu .bambooStand .bamboo.open,
+body .container .back-project-menu .bambooStand .black.open,
+body .container .back-project-menu .black-ed .bamboo.open,
+body .container .back-project-menu .black-ed .black.open,
+body .container .back-project-menu .out-of-stock .bamboo.open,
+body .container .back-project-menu .out-of-stock .black.open {
+  display: block;
+}
+body .container .back-project-menu .out-of-stock {
+  opacity: 0.5;
+}
+body .container .back-project-menu .out-of-stock input {
+  cursor: none;
+}
+body .container .back-project-menu .out-of-stock label {
+  cursor: none;
+}
+body .container .back-project-menu .out-of-stock label:hover {
+  color: #000;
+}
+body .container .back-project-menu .out-of-stock .enter-pledge input {
+  cursor: none;
+}
+body .container .back-project-menu .out-of-stock .enter-pledge .continue {
+  cursor: none;
+}
+body .container .back-project-menu.hideMenu {
+  display: block;
+}
+body .container .thanks-for-support {
+  width: 85%;
+  padding: 5%;
+  height: 0 auto;
+  margin: 0 auto;
+  margin-top: -21vh;
+  z-index: 5;
+  position: absolute;
+  z-index: 10;
+  background: transparent;
+}
+body .container .thanks-for-support .support {
+  display: none;
+  width: 100%;
+}
+body .container .thanks-for-support .support img {
+  margin-top: 2vh;
+  width: 15vw;
+  height: 7vh;
+  margin-left: 35%;
+  margin-bottom: 3vh;
+}
+body .container .thanks-for-support .support .title {
+  font-weight: 600;
+  text-align: center;
+}
+body .container .thanks-for-support .support .msg {
+  font-size: 14px;
+  line-height: 3vh;
+  text-align: center;
+  color: var(--Dark-gray);
+  margin-bottom: 2vh;
+}
+body .container .thanks-for-support .support .got-it {
+  width: 25%;
+  height: 5vh;
+  background: var(--Moderate-cyan);
+  color: #fff;
+  border-radius: 25px;
+  margin-left: 30%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+body .container .thanks-for-support .support .got-it:hover {
+  background: var(--Dark-cyan);
+}
+body .container .thanks-for-support .support.thx {
+  display: block;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+body .container .stats {
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+body .container .stats .stats-1,
+body .container .stats .stats-2,
+body .container .stats .stats-3 {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+}
+body .container .stats .stats-1 .amount,
+body .container .stats .stats-2 .amount,
+body .container .stats .stats-3 .amount {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1vh;
+}
+body .container .stats .stats-1 .bottom-note,
+body .container .stats .stats-2 .bottom-note,
+body .container .stats .stats-3 .bottom-note {
+  color: var(--Dark-gray);
+  text-align: center;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+}
+body .container .stats progress[value] {
+  margin-top: 5vh;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 25px;
+  width: 100%;
+}
+body .container .stats progress[value]::-webkit-progress-bar {
+  background-color: var(--Moderate-cyan);
+  border-radius: 25px;
+}
+body .container .stats progress[value]::-moz-progress-bar {
+  background-color: var(--Moderate-cyan);
+  border-radius: 25px;
+}
+body .container .stats progress[value]::-webkit-progress-value {
+  background-color: var(--Moderate-cyan);
+}
+body .container .about-project {
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 15vh;
+}
+body .container .about-project .name-section {
+  text-align: left;
+}
+body .container .about-project .desc {
+  text-align: left;
+  color: var(--Dark-gray);
+  font-size: 15px;
+  line-height: 3vh;
+  width: 94%;
+}
+body .container .bamboo-stand,
+body .container .black-edition {
+  width: 75%;
+  padding: 5%;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-bottom: 4vh;
+  border-radius: 6px;
+}
+body .container .bamboo-stand .header-info,
+body .container .black-edition .header-info {
+  display: flex;
+  justify-content: space-between;
+}
+body .container .bamboo-stand .header-info .offer-title,
+body .container .black-edition .header-info .offer-title {
+  font-size: 15px;
+  margin-bottom: 1vh;
+  text-align: left;
+  margin-top: 0;
+}
+body .container .bamboo-stand .header-info .price,
+body .container .black-edition .header-info .price {
+  color: var(--Moderate-cyan);
+  font-size: 14px;
+  text-align: left;
+}
+body .container .bamboo-stand .offer-desc,
+body .container .black-edition .offer-desc {
+  font-size: 14px;
+  line-height: 3vh;
+  width: 90%;
+  color: var(--Dark-gray);
+  text-align: left;
+  margin-bottom: 3vh;
+}
+body .container .bamboo-stand .pieces-avilable .price,
+body .container .black-edition .pieces-avilable .price {
+  color: var(--Black);
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+}
+body .container .bamboo-stand .pieces-avilable .price span,
+body .container .black-edition .pieces-avilable .price span {
+  color: var(--Dark-gray);
+  font-size: 14px;
+  font-weight: 100;
+  position: absolute;
+  top: 1vh;
+  margin-left: 2vw;
+}
+body .container .bamboo-stand .select-reward,
+body .container .black-edition .select-reward {
+  background: var(--Moderate-cyan);
+  color: #fff;
+  font-weight: 400;
+  height: 5vh;
+  width: 35vw;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+body .container .bamboo-stand .select-reward:hover,
+body .container .black-edition .select-reward:hover {
+  background: var(--Dark-cyan);
+}
+body .container .special-edition {
+  width: 75%;
+  padding: 5%;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0.5;
+  margin-bottom: 4vh;
+  border-radius: 6px;
+}
+body .container .special-edition .header-info {
+  display: flex;
+}
+body .container .special-edition .header-info .offer-title {
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 1vh;
+  text-align: left;
+  margin-top: 0;
+}
+body .container .special-edition .header-info .price {
+  color: var(--Moderate-cyan);
+  font-size: 14px;
+  text-align: left;
+}
+body .container .special-edition .offer-desc {
+  font-size: 14px;
+  line-height: 3vh;
+  width: 90%;
+  color: var(--Dark-gray);
+  text-align: left;
+  margin-bottom: 3vh;
+}
+body .container .special-edition .pieces-avilable .price {
+  color: var(--Black);
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+}
+body .container .special-edition .pieces-avilable .price span {
+  color: var(--Dark-gray);
+  font-size: 14px;
+  font-weight: 100;
+  position: absolute;
+  top: 1vh;
+  margin-left: 2vw;
+}
+body .container .special-edition .select-reward {
+  background: var(--Dark-gray);
+  color: #fff;
+  font-weight: 400;
+  height: 5vh;
+  width: 35vw;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+}
+@media only screen and (min-width: 800px) {
+  body .container .header .menu-about {
+    width: 55%;
+    height: 4%;
+    display: flex;
+    background: transparent;
+    z-index: 500;
+    position: absolute;
+    right: 0;
+    top: 5vh;
+  }
+  body .container .header .menu-about nav {
+    display: flex;
+    height: auto;
+    height: 20%;
+    background: transparent;
+  }
+  body .container .header .menu-about nav ul {
+    display: flex;
+    margin-top: -3vh;
+    color: #fff;
+    height: 20%;
+    background: transparent;
+  }
+  body .container .header .menu-about nav ul li {
+    margin-top: -2vh;
+    margin-right: 8vw;
+    height: 20%;
+    background: transparent;
+  }
+  body .container .icon-hamburger {
+    display: none;
+  }
+  body .container .bamboo-monnitor {
+    width: 50%;
+  }
+  body .container .bamboo-monnitor img {
+    margin-left: 45%;
+  }
+  body .container .bamboo-monnitor .back-project .btn-project {
+    width: 40%;
+    cursor: pointer;
+  }
+  body .container .bamboo-monnitor .back-project .btn-project:hover {
+    background: var(--Dark-cyan);
+  }
+  body .container .stats {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  body .container .stats .stats-1,
+body .container .stats .stats-2,
+body .container .stats .stats-3 {
+    width: 33%;
+  }
+  body .container .stats .stats-1 .amount,
+body .container .stats .stats-2 .amount,
+body .container .stats .stats-3 .amount {
+    margin-top: 0;
+  }
+  body .container .stats .stats-1 label,
+body .container .stats .stats-2 label,
+body .container .stats .stats-3 label {
+    display: flex;
+  }
+  body .container .about-project {
+    width: 50%;
+  }
+  body .container .bamboo-stand, body .container .black-edition, body .container .special-edition {
+    width: 46%;
+    padding: 2%;
+  }
+  body .container .bamboo-stand .pieces-avilable, body .container .black-edition .pieces-avilable, body .container .special-edition .pieces-avilable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  body .container .bamboo-stand .pieces-avilable .price, body .container .black-edition .pieces-avilable .price, body .container .special-edition .pieces-avilable .price {
+    width: 20%;
+  }
+  body .container .bamboo-stand .select-reward, body .container .black-edition .select-reward, body .container .special-edition .select-reward {
+    margin-top: 3vh;
+    width: 30%;
+  }
+  body .container .bookmark-img svg {
+    margin-right: 3vw;
+  }
+  body .container .thanks-for-support {
+    width: 30%;
+    margin-top: -14vh;
+    left: 30%;
+    background: transparent;
+  }
+  body .container .thanks-for-support .support {
+    z-index: 1000;
+  }
+  body .container .thanks-for-support .support img {
+    margin-top: 0vh;
+    width: 7vw;
+    height: 10vh;
+    margin-left: 37%;
+    margin-bottom: 3vh;
+  }
+  body .container .thanks-for-support .support .got-it {
+    width: 35%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
